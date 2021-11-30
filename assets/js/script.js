@@ -2,6 +2,7 @@ var startEl = document.querySelector('start');
 var quizEl = document.querySelector('quiz');
 var scoreEl = document.querySelector('score');
 var scoreEl = document.querySelector('startBtn');
+var quizH2 = document.querySelector('quizH2');
 
 var STATE = "START";
 
@@ -24,12 +25,31 @@ function displayElements() {
 }
 
 function init() {
-    STATE = "START"
+    STATE = "START";
+    displayElements();
 }
 
 function playQuiz() {
-  STATE = "START";
+  STATE = "QUIZ";
+  displayElements();
 }
-startBtn.addEventListener();
+
+function showScore() {
+    STATE = "SCORE"
+    displayElements();
+}
+
+function nextQuestion() {
+    cursor++;
+    renderQuestiom();
+}
+
+function renderQuestiom() {
+    quizH3.textContent = cursor;
+}
+
+startBtn.addEventListener("click", playQuiz);
+quizH2.addEventListener("click", showScore);
+quizH3.addEventListener("click", nextQuestion);
 
 init();
