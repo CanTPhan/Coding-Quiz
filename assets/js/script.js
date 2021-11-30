@@ -11,12 +11,12 @@ function displayElements() {
       quizEl.style.display = "none";
       scoreEl.style.display = "none";
     }
-    if (STATE === "START") {
+    if (STATE === "QUIZ") {
         startEl.style.display = "none";
         quizEl.style.display = "flex";
         scoreEl.style.display = "none";
     }
-    if (STATE === "START") {
+    if (STATE === "SCORE") {
         startEl.style.display = "none";
         quizEl.style.display = "none";
         scoreEl.style.display = "flex";
@@ -27,7 +27,7 @@ function init() {
     STATE = "START"
 }
 
-function playquiz() {
+function playQuiz() {
   STATE = "START";
 }
 startBtn.addEventListener();
